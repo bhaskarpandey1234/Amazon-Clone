@@ -1,0 +1,247 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+/* Navbar */
+/* Navbar */
+.navbar {
+    height: auto;
+    background-color: #0f1111;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    flex: 1;
+    max-width: 150px;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+
+.nav-address,
+.nav-search,
+.nav-signin,
+.nav-return,
+.nav-cart {
+    flex-basis: calc(33.33% - 10px); /* Adjust width for smaller screens */
+    text-align: center;
+    margin: 5px;
+}
+
+.nav-address p,
+.nav-signin p,
+.nav-return p,
+.nav-cart p {
+    margin: 5px 0;
+}
+
+/* Panel */
+.panel {
+    display: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 425px) {
+    .nav-address,
+    .nav-search,
+    .nav-signin,
+    .nav-return,
+    .nav-cart {
+        flex-basis: calc(50% - 10px); /* Adjust width for 425px width */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+
+    .nav-address,
+    .nav-search,
+    .nav-signin,
+    .nav-return,
+    .nav-cart {
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+
+    .panel {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .panel-ops {
+        display: block;
+        width: 50%;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Hero Section */
+.hero-section {
+    background-image: url("hero_image.jpg");
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    padding: 20px;
+}
+
+.box {
+    width: calc(50% - 30px); /* Adjust box width for responsiveness */
+    margin: 15px 0;
+    background-color: white;
+}
+
+.box-img {
+    height: 200px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content {
+    padding: 10px;
+}
+
+.box-content p {
+    color: #007185;
+}
+
+/* Footer Section */
+/* Footer Section */
+footer {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0f1111;
+    color: white;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
+.foot-panel2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-panel2 ul {
+    flex-basis: calc(25% - 20px);
+    text-align: left;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+
+.foot-panel4 {
+    text-align: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .foot-panel2 ul {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .foot-panel2 {
+        flex-wrap: wrap;
+    }
+    
+    .foot-panel2 ul {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+    .nav-search {
+        max-width: none;
+    }
+
+    .panel-ops {
+        display: block;
+        width: 50%;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-msg {
+        font-size: 1rem;
+    }
+
+    .box {
+        width: calc(33.333% - 30px); /* Adjust box width for responsiveness */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .box {
+        width: calc(25% - 30px); /* Adjust box width for responsiveness */
+    }
+}
